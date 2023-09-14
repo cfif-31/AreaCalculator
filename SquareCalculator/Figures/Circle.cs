@@ -8,6 +8,9 @@
 
         public Circle(double radius)
         {
+            if(radius <= 0)
+                throw new ArgumentOutOfRangeException(nameof(radius));
+
             Radius = radius;
         }
     }
