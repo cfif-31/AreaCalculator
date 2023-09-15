@@ -16,8 +16,8 @@
         /// <exception cref="ArgumentException">When uncorrect triangle one or more value less than or equal to 0</exception>
         public Triangle(double sideA, double sideB, double sideC)
         {
-            if (sideA + sideB <= SideC)
-                throw new ArgumentException($"Triangle {SideA} {SideB} {SideC} does not exist!");
+            if (sideA + sideB <= sideC)
+                throw new ArgumentException($"Triangle {sideA} {sideB} {sideC} does not exist!");
 
             SideA = GetCheckGreeterZeroValue(sideA, nameof(sideA));
             SideB = GetCheckGreeterZeroValue(sideB, nameof(sideB));
