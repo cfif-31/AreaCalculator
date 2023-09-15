@@ -2,7 +2,7 @@ using SquareCalculator.Figures;
 
 namespace SquareCalculator.Test
 {
-    public class Tests
+    public class BaseFigureTest
     {
         public static IEnumerable<TestCaseData> FigureTestCase
         {
