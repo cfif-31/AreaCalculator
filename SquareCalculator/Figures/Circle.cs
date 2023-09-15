@@ -7,7 +7,6 @@
         /// </summary>
         private double Radius { get; }
 
-        public override double Square => 2 * Math.PI * Radius;
 
         /// <summary>
         /// Constructor of Circle
@@ -18,5 +17,7 @@
         {
             Radius = GetCheckGreeterZeroValue(radius, nameof(radius));
         }
+
+        public override double Square => Math.PI * Math.Pow(Radius,2);
     }
 }
