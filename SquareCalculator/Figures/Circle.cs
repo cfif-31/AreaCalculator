@@ -17,6 +17,6 @@
             Radius = GetCheckGreeterZeroValue(radius, nameof(radius));
         }
 
-        public override double Square => Math.PI * Math.Pow(Radius,2);
+        public override double Square => Math.PI * Math.Pow(Radius, 2);
     }
 }
