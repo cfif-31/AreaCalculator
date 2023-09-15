@@ -7,7 +7,6 @@
         /// </summary>
         private double Radius { get; }
 
-
         /// <summary>
         /// Constructor of Circle
         /// </summary>
