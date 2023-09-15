@@ -1,17 +1,22 @@
 ﻿namespace SquareCalculator.Figures
 {
-    internal class Circle : Figure
+    public class Circle : Figure
     {
+        /// <summary>
+        /// Сircle radius
+        /// </summary>
         private double Radius { get; }
 
         public override double Square => 2 * Math.PI * Radius;
 
+        /// <summary>
+        /// Constructor of Circle
+        /// </summary>
+        /// <param name="radius">Сircle radius</param>
+        /// <exception cref="ArgumentOutOfRangeException">When radius less than or equal 0</exception>
         public Circle(double radius)
         {
-            if(radius <= 0)
-                throw new ArgumentOutOfRangeException(nameof(radius));
-
-            Radius = radius;
+            Radius = GetCheckGreeterZeroValue(radius, nameof(radius));
         }
     }
 }
