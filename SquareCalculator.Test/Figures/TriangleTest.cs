@@ -44,5 +44,15 @@ namespace SquareCalculator.Test.Figures
             var ex = Assert.Throws<ArgumentOutOfRangeException>(() => new Triangle(sideA, sideB, sideC));
             Assert.That(ex.Message, Is.EqualTo($"Value ({sideC}) most be greather 0 (Parameter 'sideC')"));
         }
+
+        [Test]
+        [TestCase(3,5,8)]
+        [TestCase(7,5,2)]
+        [TestCase(4,9,5)]
+        public void NotExistTest(double sideA, double sideB, double sideC)
+        {
+            var ex = Assert.Throws<ArgumentException>(() => new Triangle(sideA, sideB, sideC));
+            Assert.That(ex.Message, Is.EqualTo($"Triangle {sideA} {sideB} {sideC} does not exist!"));
+        }
     }
 }
