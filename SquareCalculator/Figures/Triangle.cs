@@ -29,7 +29,12 @@
             get
             {
                 double halfPerimeter = (SideA + SideB + SideC) / 2;
-                double square = Math.Sqrt(halfPerimeter * (halfPerimeter - SideA) * (halfPerimeter - SideB) * (halfPerimeter - SideC));
+
+                double halfPerSubSideA = halfPerimeter - SideA;
+                double halfPerSubSideB = halfPerimeter - SideB;
+                double halfPerSubSideC = halfPerimeter - SideC;
+
+                double square = Math.Sqrt(halfPerimeter * halfPerSubSideA * halfPerSubSideB * halfPerSubSideC);
 
                 return square;
             }
