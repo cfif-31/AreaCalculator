@@ -1,5 +1,8 @@
 ﻿namespace SquareCalculator.Figures
 {
+    /// <summary>
+    /// Implementation of circle figure
+    /// </summary>
     public class Circle : Figure
     {
         /// <summary>

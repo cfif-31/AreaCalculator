@@ -1,5 +1,8 @@
 ﻿namespace SquareCalculator
 {
+    /// <summary>
+    /// Base figure
+    /// </summary>
     public abstract class Figure
     {
         private readonly Lazy<double> _square;

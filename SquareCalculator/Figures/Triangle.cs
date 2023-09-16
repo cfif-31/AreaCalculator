@@ -1,5 +1,8 @@
 ﻿namespace SquareCalculator.Figures
 {
+    /// <summary>
+    /// Implementation of triangle figure
+    /// </summary>
     public class Triangle : Figure
     {
         /// <summary>
@@ -12,10 +15,20 @@
         /// </summary>
         public bool IsRectangular => _IsRectangular.Value;
 
-        //Sides
+        #region Sides property
+        /// <summary>
+        /// Length A of  Triangle
+        /// </summary>
         public double SideA { get; }
+        /// <summary>
+        /// Length B of  Triangle
+        /// </summary>
         public double SideB { get; }
+        /// <summary>
+        /// Length C of  Triangle
+        /// </summary>
         public double SideC { get; }
+        #endregion
 
         /// <summary>
         /// Constructor of Triangle
