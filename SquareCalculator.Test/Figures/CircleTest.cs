@@ -17,6 +17,7 @@ namespace SquareCalculator.Test.Figures
         }
 
         [Test]
+        [TestCase(0)]
         [TestCase(-1)]
         [TestCase(-2)]
         [TestCase(-4)]
