@@ -2,7 +2,26 @@
 {
     public abstract class Figure
     {
-        public abstract double Square { get; }
+        private readonly Lazy<double> _square;
+
+        /// <summary>
+        /// Square of figure
+        /// </summary>
+        public double Square => _square.Value;
+
+        /// <summary>
+        /// Base figure constructor
+        /// </summary>
+        public Figure()
+        {
+            _square = new Lazy<double>(CalculateSquare);
+        }
+
+        /// <summary>
+        /// Calculation figure square
+        /// </summary>
+        /// <returns>Square of figure</returns>
+        protected abstract double CalculateSquare();
 
         /// <summary>
         /// Check side value

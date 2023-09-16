@@ -2,7 +2,9 @@
 {
     public class Triangle : Figure
     {
-        //IsRectangular Lazzy field
+        /// <summary>
+        /// IsRectangular Lazzy field
+        /// </summary>
         private readonly Lazy<bool> _IsRectangular;
 
         /// <summary>
@@ -63,20 +65,21 @@
             return cathetus1Sq + cathetus2Sq == hypotenuseSq;
         }
 
-        public override double Square
+        /// <summary>
+        /// Calculation square of triangle
+        /// </summary>
+        /// <returns>Square of triangle</returns>
+        protected override double CalculateSquare()
         {
-            get
-            {
-                double halfPerimeter = (SideA + SideB + SideC) / 2;
+            double halfPerimeter = (SideA + SideB + SideC) / 2;
 
-                double halfPerSubSideA = halfPerimeter - SideA;
-                double halfPerSubSideB = halfPerimeter - SideB;
-                double halfPerSubSideC = halfPerimeter - SideC;
+            double halfPerSubSideA = halfPerimeter - SideA;
+            double halfPerSubSideB = halfPerimeter - SideB;
+            double halfPerSubSideC = halfPerimeter - SideC;
 
-                double square = Math.Sqrt(halfPerimeter * halfPerSubSideA * halfPerSubSideB * halfPerSubSideC);
+            double square = Math.Sqrt(halfPerimeter * halfPerSubSideA * halfPerSubSideB * halfPerSubSideC);
 
-                return square;
-            }
+            return square;
         }
     }
 }

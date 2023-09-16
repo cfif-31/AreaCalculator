@@ -17,6 +17,10 @@
             Radius = GetCheckGreeterZeroValue(radius, nameof(radius));
         }
 
-        public override double Square => Math.PI * Math.Pow(Radius, 2);
+        /// <summary>
+        /// Calculation square of circle
+        /// </summary>
+        /// <returns>Square of circle</returns>
+        protected override double CalculateSquare() => Math.PI * Math.Pow(Radius, 2);
     }
 }
