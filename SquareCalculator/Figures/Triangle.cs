@@ -57,7 +57,7 @@
         /// <exception cref="ArgumentException">When uncorrect triangle one or more value less than or equal to 0</exception>
         public Triangle(double sideA, double sideB, double sideC) : base()
         {
-           Validate(sideA, sideB, sideC);
+            Validate(sideA, sideB, sideC);
 
             SideA = sideA;
             SideB = sideB;
