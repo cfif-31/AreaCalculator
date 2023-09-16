@@ -55,7 +55,7 @@
         /// <param name="sideB">Side B value</param>
         /// <param name="sideC">Side C value</param>
         /// <exception cref="ArgumentException">When uncorrect triangle one or more value less than or equal to 0</exception>
-        public Triangle(double sideA, double sideB, double sideC)
+        public Triangle(double sideA, double sideB, double sideC) : base()
         {
            Validate(sideA, sideB, sideC);
 

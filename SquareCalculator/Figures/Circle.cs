@@ -25,7 +25,7 @@
         /// </summary>
         /// <param name="radius">Сircle radius</param>
         /// <exception cref="ArgumentOutOfRangeException">When radius less than or equal 0</exception>
-        public Circle(double radius)
+        public Circle(double radius) : base()
         {
             Validate(radius);
             Radius = radius;
