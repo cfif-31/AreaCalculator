@@ -16,13 +16,33 @@ namespace SquareCalculator.Test.Figures
         }
 
         [Test]
-        [TestCase(3,5,8)]
-        [TestCase(7,5,2)]
-        [TestCase(4,9,5)]
+        [TestCase(3, 5, 8)]
+        [TestCase(7, 5, 2)]
+        [TestCase(4, 9, 5)]
         public void NotExistTest(double sideA, double sideB, double sideC)
         {
             var ex = Assert.Throws<ArgumentException>(() => new Triangle(sideA, sideB, sideC));
             Assert.That(ex.Message, Is.EqualTo($"Triangle {sideA} {sideB} {sideC} does not exist!"));
+        }
+
+        [Test]
+        [TestCase(88, 105, 137)]
+        [TestCase(17, 144, 145)]
+        [TestCase(52, 165, 173)]
+        public void RectangularTest(double sideA, double sideB, double sideC)
+        {
+            var triangle = new Triangle(sideA, sideB, sideC);
+            Assert.That(triangle.IsRectangular, Is.True);
+        }
+
+        [Test]
+        [TestCase(15, 10, 8)]
+        [TestCase(14, 7, 19)]
+        [TestCase(18, 23, 15)]
+        public void NotRectangularTest(double sideA, double sideB, double sideC)
+        {
+            var triangle = new Triangle(sideA, sideB, sideC);
+            Assert.That(triangle.IsRectangular, Is.False);
         }
     }
 }

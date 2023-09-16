@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
-using SquareCalculator.Figures;
+﻿using SquareCalculator.Figures;
 
 namespace SquareCalculator.Test.Figures
 {
@@ -7,7 +6,7 @@ namespace SquareCalculator.Test.Figures
     {
 
         [Test]
-        [TestCase(78.5,5)]
+        [TestCase(78.5, 5)]
         [TestCase(201.061888, 8)]
         [TestCase(452.389248, 12)]
         [TestCase(615.752032, 14)]
