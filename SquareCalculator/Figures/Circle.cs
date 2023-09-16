@@ -11,13 +11,24 @@
         private double Radius { get; }
 
         /// <summary>
+        /// Validate input data
+        /// </summary>
+        /// <param name="radius">Сircle radius</param>
+        /// <exception cref="ArgumentOutOfRangeException">When radius less than or equal 0</exception>
+        private void Validate(double radius)
+        {
+            ValidateGreeterZeroValue(radius, nameof(radius));
+        }
+
+        /// <summary>
         /// Constructor of Circle
         /// </summary>
         /// <param name="radius">Сircle radius</param>
         /// <exception cref="ArgumentOutOfRangeException">When radius less than or equal 0</exception>
         public Circle(double radius)
         {
-            Radius = GetCheckGreeterZeroValue(radius, nameof(radius));
+            Validate(radius);
+            Radius = radius;
         }
 
         /// <summary>
