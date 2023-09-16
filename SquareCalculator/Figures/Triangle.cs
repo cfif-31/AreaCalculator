@@ -2,6 +2,14 @@
 {
     public class Triangle : Figure
     {
+        //IsRectangular Lazzy field
+        private readonly Lazy<bool> _IsRectangular;
+
+        /// <summary>
+        /// Check triangle is rectangular
+        /// </summary>
+        public bool IsRectangular => _IsRectangular.Value;
+
         //Sides
         public double SideA { get; }
         public double SideB { get; }
@@ -22,6 +30,37 @@
             SideA = GetCheckGreeterZeroValue(sideA, nameof(sideA));
             SideB = GetCheckGreeterZeroValue(sideB, nameof(sideB));
             SideC = GetCheckGreeterZeroValue(sideC, nameof(sideC));
+
+            _IsRectangular = new Lazy<bool>(CalculateIsRectangular);
+        }
+
+        /// <summary>
+        /// Check triangle is rectangular 
+        /// </summary>
+        /// <returns>When triangle is rectangular, return true, or false</returns>
+        protected bool CalculateIsRectangular()
+        {
+            double sideASquare = Math.Pow(SideA, 2);
+            double sideBSquare = Math.Pow(SideB, 2);
+            double sideCSquare = Math.Pow(SideC, 2);
+
+            bool checkA = CheckPythagorasSides(sideASquare, sideBSquare, sideCSquare);
+            bool checkB = CheckPythagorasSides(sideBSquare, sideASquare, sideCSquare);
+            bool checkC = CheckPythagorasSides(sideCSquare, sideASquare, sideBSquare);
+
+            return checkA || checkB || checkC;
+        }
+
+        /// <summary>
+        /// Check rectangular sides using Pythagoras formula
+        /// </summary>
+        /// <param name="hypotenuseSq">Square of the hypotenuse</param>
+        /// <param name="cathetus1Sq">Square of the cathetus1</param>
+        /// <param name="cathetus2Sq">Square of the cathetus2</param>
+        /// <returns></returns>
+        protected bool CheckPythagorasSides(double hypotenuseSq, double cathetus1Sq, double cathetus2Sq)
+        {
+            return cathetus1Sq + cathetus2Sq == hypotenuseSq;
         }
 
         public override double Square
