@@ -6,14 +6,14 @@
     public class Circle : Figure
     {
         /// <summary>
-        /// Сircle radius
+        /// Circle radius
         /// </summary>
         private double Radius { get; }
 
         /// <summary>
         /// Validate input data
         /// </summary>
-        /// <param name="radius">Сircle radius</param>
+        /// <param name="radius">Circle radius</param>
         /// <exception cref="ArgumentOutOfRangeException">When radius less than or equal 0</exception>
         private void Validate(double radius)
         {
@@ -23,7 +23,7 @@
         /// <summary>
         /// Constructor of Circle
         /// </summary>
-        /// <param name="radius">Сircle radius</param>
+        /// <param name="radius">Circle radius</param>
         /// <exception cref="ArgumentOutOfRangeException">When radius less than or equal 0</exception>
         public Circle(double radius) : base()
         {

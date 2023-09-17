@@ -2,6 +2,9 @@
 
 namespace SquareCalculator.Test.Figures
 {
+    /// <summary>
+    /// Test circle implementation of figure
+    /// </summary>
     public class CircleTest
     {
 
@@ -27,7 +30,7 @@ namespace SquareCalculator.Test.Figures
         public void NegativeTest(double radius)
         {
             var ex = Assert.Throws<ArgumentOutOfRangeException>(() => new Circle(radius));
-            Assert.That(ex.Message, Is.EqualTo($"Value ({radius}) most be greather 0 (Parameter 'radius')"));
+            Assert.That(ex.Message, Is.EqualTo($"Value ({radius}) most be greater 0 (Parameter 'radius')"));
         }
     }
 }

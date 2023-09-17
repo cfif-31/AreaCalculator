@@ -6,7 +6,7 @@
     public class Triangle : Figure
     {
         /// <summary>
-        /// IsRectangular Lazzy field
+        /// IsRectangular Lazy field
         /// </summary>
         private readonly Lazy<bool> _IsRectangular;
 
@@ -37,7 +37,7 @@
         /// <param name="sideA">Side A value</param>
         /// <param name="sideB">Side B value</param>
         /// <param name="sideC">Side C value</param>
-        /// <exception cref="ArgumentException">When uncorrect triangle one or more value less than or equal to 0</exception>
+        /// <exception cref="ArgumentException">When incorrect triangle one or more value less than or equal to 0</exception>
         private void Validate(double sideA, double sideB, double sideC)
         {
             if (sideA >= sideB + sideC || sideB >= sideC + sideA || sideC >= sideA + sideB)
@@ -54,7 +54,7 @@
         /// <param name="sideA">Side A value</param>
         /// <param name="sideB">Side B value</param>
         /// <param name="sideC">Side C value</param>
-        /// <exception cref="ArgumentException">When uncorrect triangle one or more value less than or equal to 0</exception>
+        /// <exception cref="ArgumentException">When incorrect triangle one or more value less than or equal to 0</exception>
         public Triangle(double sideA, double sideB, double sideC) : base()
         {
             Validate(sideA, sideB, sideC);
