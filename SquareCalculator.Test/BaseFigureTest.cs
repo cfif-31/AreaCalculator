@@ -24,7 +24,7 @@ namespace SquareCalculator.Test
         [TestCaseSource(nameof(FigureTestCase))]
         public void FigureTest(double exceptedResult, Figure figure)
         {
-            Assert.That(figure.Square, Is.EqualTo(exceptedResult).Within(0.05));
+            Assert.That(figure.Area, Is.EqualTo(exceptedResult).Within(0.05));
         }
     }
 }

@@ -35,6 +35,6 @@
         /// Calculation square of circle
         /// </summary>
         /// <returns>Square of circle</returns>
-        protected override double CalculateSquare() => Math.PI * Math.Pow(Radius, 2);
+        protected override double CalculateArea() => Math.PI * Math.Pow(Radius, 2);
     }
 }

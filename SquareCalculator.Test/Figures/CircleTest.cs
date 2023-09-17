@@ -16,7 +16,7 @@ namespace SquareCalculator.Test.Figures
         public void SquareTest(double exceptedResult, double radius)
         {
             var figure = new Circle(radius);
-            Assert.That(figure.Square, Is.EqualTo(exceptedResult).Within(0.05));
+            Assert.That(figure.Area, Is.EqualTo(exceptedResult).Within(0.05));
         }
 
         [Test]

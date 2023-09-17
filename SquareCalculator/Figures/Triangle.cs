@@ -99,7 +99,7 @@
         /// Calculation square of triangle
         /// </summary>
         /// <returns>Square of triangle</returns>
-        protected override double CalculateSquare()
+        protected override double CalculateArea()
         {
             double halfPerimeter = (SideA + SideB + SideC) / 2;
 

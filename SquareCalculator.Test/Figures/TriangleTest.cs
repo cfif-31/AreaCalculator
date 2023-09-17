@@ -15,7 +15,7 @@ namespace SquareCalculator.Test.Figures
         public void SquareTest(double exceptedResult, double sideA, double sideB, double sideC)
         {
             var figure = new Triangle(sideA, sideB, sideC);
-            Assert.That(figure.Square, Is.EqualTo(exceptedResult).Within(0.05));
+            Assert.That(figure.Area, Is.EqualTo(exceptedResult).Within(0.05));
         }
 
         [Test]

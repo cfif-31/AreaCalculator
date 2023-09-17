@@ -5,26 +5,26 @@
     /// </summary>
     public abstract class Figure
     {
-        private readonly Lazy<double> _square;
+        private readonly Lazy<double> _area;
 
         /// <summary>
         /// Square of figure
         /// </summary>
-        public double Square => _square.Value;
+        public double Area => _area.Value;
 
         /// <summary>
         /// Base figure constructor
         /// </summary>
         public Figure()
         {
-            _square = new Lazy<double>(CalculateSquare);
+            _area = new Lazy<double>(CalculateArea);
         }
 
         /// <summary>
         /// Calculation figure square
         /// </summary>
         /// <returns>Square of figure</returns>
-        protected abstract double CalculateSquare();
+        protected abstract double CalculateArea();
 
         /// <summary>
         /// Check side value
@@ -35,7 +35,7 @@
         protected void ValidateGreeterZeroValue(double value, string valueName)
         {
             if (value <= 0)
-                throw new ArgumentOutOfRangeException(valueName, $"Value ({value}) most be greather 0");
+                throw new ArgumentOutOfRangeException(valueName, $"Value ({value}) most be greater 0");
         }
     }
 }
