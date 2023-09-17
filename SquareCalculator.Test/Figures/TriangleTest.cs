@@ -29,9 +29,42 @@ namespace SquareCalculator.Test.Figures
         }
 
         [Test]
+        //SideA
+        [TestCase(0, 1, 1)]
+        [TestCase(-10, 1, 1)]
+        [TestCase(-20, 1, 1)]
+        [TestCase(-4, 1, 1)]
+        //SideB
+        [TestCase(1, 0, 1)]
+        [TestCase(1, -10, 1)]
+        [TestCase(1, -20, 1)]
+        [TestCase(1, -4, 1)]
+        //SideC
+        [TestCase(1, 1, 0)]
+        [TestCase(1, 1, -10)]
+        [TestCase(1, 1, -20)]
+        [TestCase(1, 1, -4)]
+        public void NegativeTest(double sideA, double sideB, double sideC)
+        {
+            try
+            {
+                new Triangle(sideA, sideB, sideC);
+                Assert.Fail("Construct Triangle With incorrect value!");
+            }
+            catch (ArgumentOutOfRangeException argumentRangeEx)
+            {
+                Assert.That(argumentRangeEx.Message, Does.Contain("most be greater 0 (Parameter"));
+            }
+            catch (ArgumentException argumentEx)
+            {
+                Assert.That(argumentEx.Message, Is.EqualTo($"Triangle {sideA} {sideB} {sideC} does not exist!"));
+            }
+        }
+
+        [Test]
         [TestCase(88, 105, 137)]
         [TestCase(17, 145, 144)]
-        [TestCase(173,52, 165)]
+        [TestCase(173, 52, 165)]
         public void RectangularTest(double sideA, double sideB, double sideC)
         {
             var triangle = new Triangle(sideA, sideB, sideC);
