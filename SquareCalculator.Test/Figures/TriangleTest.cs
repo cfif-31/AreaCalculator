@@ -2,6 +2,9 @@
 
 namespace SquareCalculator.Test.Figures
 {
+    /// <summary>
+    /// Test triangle implementation of figure
+    /// </summary>
     public class TriangleTest
     {
         [Test]
@@ -27,8 +30,8 @@ namespace SquareCalculator.Test.Figures
 
         [Test]
         [TestCase(88, 105, 137)]
-        [TestCase(17, 144, 145)]
-        [TestCase(52, 165, 173)]
+        [TestCase(17, 145, 144)]
+        [TestCase(173,52, 165)]
         public void RectangularTest(double sideA, double sideB, double sideC)
         {
             var triangle = new Triangle(sideA, sideB, sideC);

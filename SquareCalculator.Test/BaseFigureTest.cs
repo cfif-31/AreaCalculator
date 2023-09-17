@@ -2,6 +2,9 @@ using SquareCalculator.Figures;
 
 namespace SquareCalculator.Test
 {
+    /// <summary>
+    /// Test base figure type
+    /// </summary>
     public class BaseFigureTest
     {
         public static IEnumerable<TestCaseData> FigureTestCase
