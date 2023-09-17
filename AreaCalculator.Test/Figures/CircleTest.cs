@@ -1,6 +1,7 @@
-﻿using SquareCalculator.Figures;
+﻿using AreaCalculator.Base;
+using AreaCalculator.Figures;
 
-namespace SquareCalculator.Test.Figures
+namespace AreaCalculator.Test.Figures
 {
     /// <summary>
     /// Test circle implementation of figure
@@ -15,7 +16,7 @@ namespace SquareCalculator.Test.Figures
         [TestCase(615.752032, 14)]
         public void SquareTest(double exceptedResult, double radius)
         {
-            var figure = new Circle(radius);
+            IArea figure = new Circle(radius);
             Assert.That(figure.Area, Is.EqualTo(exceptedResult).Within(0.05));
         }
 

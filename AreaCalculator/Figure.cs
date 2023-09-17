@@ -1,6 +1,6 @@
-﻿using SquareCalculator.Base;
+﻿using AreaCalculator.Base;
 
-namespace SquareCalculator
+namespace AreaCalculator
 {
     /// <summary>
     /// Base figure

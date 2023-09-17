@@ -1,4 +1,4 @@
-﻿namespace SquareCalculator.Figures
+﻿namespace AreaCalculator.Figures
 {
     /// <summary>
     /// Implementation of circle figure

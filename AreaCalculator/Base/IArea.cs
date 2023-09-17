@@ -1,4 +1,4 @@
-﻿namespace SquareCalculator.Base
+﻿namespace AreaCalculator.Base
 {
     /// <summary>
     /// Provides the ability to calculate area

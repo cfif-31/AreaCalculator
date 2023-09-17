@@ -1,6 +1,7 @@
-﻿using SquareCalculator.Figures;
+﻿using AreaCalculator.Base;
+using AreaCalculator.Figures;
 
-namespace SquareCalculator.Test.Figures
+namespace AreaCalculator.Test.Figures
 {
     /// <summary>
     /// Test triangle implementation of figure
@@ -14,7 +15,7 @@ namespace SquareCalculator.Test.Figures
         [TestCase(947.271, 52, 38, 55)]
         public void SquareTest(double exceptedResult, double sideA, double sideB, double sideC)
         {
-            var figure = new Triangle(sideA, sideB, sideC);
+            IArea figure = new Triangle(sideA, sideB, sideC);
             Assert.That(figure.Area, Is.EqualTo(exceptedResult).Within(0.05));
         }
 
@@ -67,7 +68,7 @@ namespace SquareCalculator.Test.Figures
         [TestCase(173, 52, 165)]
         public void RectangularTest(double sideA, double sideB, double sideC)
         {
-            var triangle = new Triangle(sideA, sideB, sideC);
+            IRectangular triangle = new Triangle(sideA, sideB, sideC);
             Assert.That(triangle.IsRectangular, Is.True);
         }
 

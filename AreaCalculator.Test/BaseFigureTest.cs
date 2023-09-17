@@ -1,6 +1,6 @@
-using SquareCalculator.Figures;
+using AreaCalculator.Figures;
 
-namespace SquareCalculator.Test
+namespace AreaCalculator.Test
 {
     /// <summary>
     /// Test base figure type

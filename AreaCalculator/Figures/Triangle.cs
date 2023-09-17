@@ -1,6 +1,6 @@
-﻿using SquareCalculator.Base;
+﻿using AreaCalculator.Base;
 
-namespace SquareCalculator.Figures
+namespace AreaCalculator.Figures
 {
     /// <summary>
     /// Implementation of triangle figure
