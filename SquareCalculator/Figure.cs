@@ -1,9 +1,11 @@
-﻿namespace SquareCalculator
+﻿using SquareCalculator.Base;
+
+namespace SquareCalculator
 {
     /// <summary>
     /// Base figure
     /// </summary>
-    public abstract class Figure
+    public abstract class Figure : IArea
     {
         private readonly Lazy<double> _area;
 

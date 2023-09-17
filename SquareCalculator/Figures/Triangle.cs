@@ -1,9 +1,11 @@
-﻿namespace SquareCalculator.Figures
+﻿using SquareCalculator.Base;
+
+namespace SquareCalculator.Figures
 {
     /// <summary>
     /// Implementation of triangle figure
     /// </summary>
-    public class Triangle : Figure
+    public class Triangle : Figure, IRectangular
     {
         /// <summary>
         /// IsRectangular Lazy field
